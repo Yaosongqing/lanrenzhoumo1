@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.text.ysq.lanrenzhoumo.Activity.WelcomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/welcome_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/welcome_txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="测试"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/welcome_txt_view2"
+        />
+    <TextView
+        android:id="@id/welcome_txt_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="测试文字测试文字"
+        android:textSize="20sp"
+        android:layout_below="@id/welcome_txt_view"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/welcome_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome_btn3"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/welcome_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="微博登录"
+            android:textColor="#FFFFFF"
+            android:background="#88000000"
+            />
+        <Button
+            android:id="@+id/welcome_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="微信登录"
+            android:textColor="#FFFFFF"
+            android:background="#88000000"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@id/welcome_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="暂不登录，随便看看"
+        android:textColor="#FFFFFF"
+        android:background="#33000000"
+        android:onClick="click"
+        />
+
+
+</RelativeLayout>
