@@ -11,24 +11,23 @@
         android:layout_height="match_parent" />
 
     <TextView
-        android:id="@+id/welcome_txt_view"
+        android:id="@+id/welcome_title_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:text="测试"
         android:textSize="20sp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@+id/welcome_txt_view2"
+        android:layout_alignLeft="@+id/welcome_sub_txt"
         />
     <TextView
-        android:id="@id/welcome_txt_view2"
+        android:id="@id/welcome_sub_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:text="测试文字测试文字"
         android:textSize="20sp"
-        android:layout_below="@id/welcome_txt_view"
+        android:layout_below="@id/welcome_title_txt"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         />
@@ -39,28 +38,53 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/welcome_btn3"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/welcome_btn1"
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="微博登录"
-            android:textColor="#FFFFFF"
-            android:background="#88000000"
-            />
-        <Button
-            android:id="@+id/welcome_btn2"
+            android:padding="12dp"
+            android:background="#88000000">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sina"/>
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/welcome_weibo_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微博登录"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"/>
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="微信登录"
-            android:textColor="#FFFFFF"
-            android:background="#88000000"
-            />
+            android:padding="12dp"
+            android:background="#88000000">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/weixin"/>
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/welcome_weixin_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信登录"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
     </LinearLayout>
     <Button
         android:id="@id/welcome_btn3"

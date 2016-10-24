@@ -21,12 +21,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private List<Integer> images = new ArrayList<>();
-    private List<TextView> views = new ArrayList<>();
+    private List<String> titleviews = new ArrayList<>();
+    private List<String> subviews = new ArrayList<>();
     private MyPagerAdapter myPagerAdapter;
     //每隔多少秒发一条消息到主线程，更新viewpager界面
     private long scrollTimeOffset = 5000;
     private boolean isStop = false;
-    private TextView mTextView;
+    private TextView mSubtxt;
+    private TextView mTitletxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,8 @@ public class WelcomeActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         mViewPager = (ViewPager) findViewById(R.id.welcome_view_pager);
-        mTextView = (TextView) findViewById(R.id.welcome_txt_view);
+        mTitletxt = (TextView) findViewById(R.id.welcome_title_txt);
+        mSubtxt = (TextView) findViewById(R.id.welcome_sub_txt);
         initpictures();
         myPagerAdapter = new MyPagerAdapter();
         mViewPager.setAdapter(myPagerAdapter);
@@ -74,6 +77,15 @@ public class WelcomeActivity extends AppCompatActivity {
         images.add(R.drawable.pic2);
         images.add(R.drawable.pic3);
         images.add(R.drawable.pic4);
+        titleviews.add("闭目");
+        titleviews.add("睁眼");
+        titleviews.add("启程");
+        titleviews.add("我们");
+        subviews.add("难掩喜悦与期待");
+        subviews.add("因为你心为所动");
+        subviews.add("只因追寻你所爱");
+        subviews.add("做最了解你的人");
+
     }
 
     class MyPagerAdapter extends PagerAdapter {
@@ -91,6 +103,8 @@ public class WelcomeActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             ImageView imageView = new ImageView(WelcomeActivity.this);
+            mTitletxt.setText(titleviews.get(position%4));
+            mSubtxt.setText(subviews.get(position%4));
             imageView.setImageResource(images.get(position%4));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             container.addView(imageView);
@@ -108,4 +122,5 @@ public class WelcomeActivity extends AppCompatActivity {
         isStop = true;
         super.onDestroy();
     }
+
 }
