@@ -9,11 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FEFEFE">
-        <ImageView
+        <ImageButton
+            android:id="@+id/self_btn_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            android:src="@drawable/left"/>
+            android:src="@drawable/left"
+            android:onClick="click"
+            android:background="#00FFFFFF"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -22,14 +25,17 @@
             android:text="设置个人资料"
             android:layout_gravity="center_vertical"
             android:textSize="18sp"/>
-        <ImageView
+        <ImageButton
+            android:id="@+id/self_btn_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            android:src="@drawable/right"/>
+            android:src="@drawable/right"
+            android:onClick="click"
+            android:background="#00FFFFFF"/>
         </LinearLayout>
     <TextView
-        android:id="@+id/self_line1"
+        android:id="@+id/self_line_one"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#D5D5D5"
@@ -37,13 +43,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/self_line1"
+        android:layout_below="@id/self_line_one"
         android:orientation="vertical"
         android:gravity="center_horizontal">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/default_avatar"/>
+            android:src="@drawable/default_avatar"
+            android:layout_marginTop="50dp"/>
 
     </LinearLayout>
 </RelativeLayout>

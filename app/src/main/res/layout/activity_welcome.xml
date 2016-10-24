@@ -36,15 +36,17 @@
         android:id="@+id/welcome_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/welcome_btn3"
+        android:layout_above="@+id/welcome_btn_three"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/welcome_btn_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="12dp"
+            android:onClick="click"
             android:background="#88000000">
             <ImageView
                 android:layout_width="wrap_content"
@@ -65,11 +67,13 @@
             android:layout_height="match_parent"
             android:background="#00FFFFFF"/>
         <LinearLayout
+            android:id="@+id/welcome_btn_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="12dp"
+            android:onClick="click"
             android:background="#88000000">
             <ImageView
                 android:layout_width="wrap_content"
@@ -87,7 +91,7 @@
         </LinearLayout>
     </LinearLayout>
     <Button
-        android:id="@id/welcome_btn3"
+        android:id="@id/welcome_btn_three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

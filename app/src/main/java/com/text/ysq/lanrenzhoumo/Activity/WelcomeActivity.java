@@ -1,5 +1,6 @@
 package com.text.ysq.lanrenzhoumo.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v4.view.PagerAdapter;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.text.ysq.lanrenzhoumo.R;
 
@@ -29,6 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private boolean isStop = false;
     private TextView mSubtxt;
     private TextView mTitletxt;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,9 +70,21 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void click(View view){
-        Intent intent = new Intent();
-        intent.setClass(this,SelfDataActivity.class);
-        startActivity(intent);
+        int btnID = view.getId();
+        switch (btnID){
+            case R.id.welcome_btn_one:
+                Toast.makeText(context, "这是微博登录", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.welcome_btn_two:
+                Toast.makeText(context, "这是微信登录", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.welcome_btn_three:
+                Intent intent = new Intent();
+                intent.setClass(this,SelfDataActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 
     private void initpictures() {
