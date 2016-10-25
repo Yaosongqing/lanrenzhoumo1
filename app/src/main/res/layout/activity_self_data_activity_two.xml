@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.text.ysq.lanrenzhoumo.Activity.SelfDataActivityTwo">
     <LinearLayout
-        android:id="@+id/self_two_linearlayout"
+        android:id="@+id/self_two_linearlayoutone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FEFEFE">
@@ -34,24 +34,199 @@
             android:onClick="click"
             android:background="#00FFFFFF"/>
     </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/self_two_line_one"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/self_two_linearlayout"
+        android:layout_height="1dp"
+        android:background="#D5D5D5"
+        android:layout_below="@id/self_two_linearlayoutone"/>
+    <LinearLayout
+        android:id="@+id/self_two_linearlayouttwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/self_two_line_one"
+        android:layout_marginTop="30dp"
         >
         <CheckBox
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="周边游"
+        android:textSize="18sp"
+        android:textColor="#333942"
         android:drawableTop="@drawable/self_data_zhoubianyou"
         android:drawableLeft="@drawable/radiogroup_state"
         android:button="@null"
         android:gravity="center"
+        android:layout_marginLeft="20dp"
         />
-
-
-
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="酒吧"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_jiuba"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="音乐"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_yinyue"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/self_two_linearlayoutthree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/self_two_linearlayouttwo"
+        android:layout_marginTop="30dp"
+        >
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="戏剧"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_xiju"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="展览"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_zhanlan"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="美食"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_meishi"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/self_two_linearlayoutfour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/self_two_linearlayoutthree"
+        android:layout_marginTop="30dp"
+        >
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="购物"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_gouwu"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="电影"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_dianying"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="聚会"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_juhui"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/self_two_linearlayoutfive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/self_two_linearlayoutfour"
+        android:layout_marginTop="30dp"
+        >
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="运动"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_yundong"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="公益"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_gongyi"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="商业"
+            android:textSize="18sp"
+            android:textColor="#333942"
+            android:drawableTop="@drawable/self_data_shangye"
+            android:drawableLeft="@drawable/radiogroup_state"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
     </LinearLayout>
 
 </RelativeLayout>

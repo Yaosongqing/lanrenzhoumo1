@@ -5,32 +5,33 @@
     android:layout_height="match_parent"
     tools:context=".Activity.HomeActivity">
     <android.support.v4.view.ViewPager
-        android:id="@+id/main_view_pager"
+        android:id="@+id/home_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/main_menu_rg"/>
+        android:layout_above="@+id/home_menu_rg"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#F1EFEC"
-        android:layout_above="@+id/main_menu_rg"/>
+        android:layout_above="@+id/home_menu_rg"/>
     <RadioGroup
-        android:id="@id/main_menu_rg"
+        android:id="@id/home_menu_rg"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
         <RadioButton
-            android:id="@+id/main_menu_item1"
+            android:id="@+id/home_menu_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
+            android:checked="true"
             android:drawableLeft="@drawable/menu_first_selector"
             android:button="@null"
             />
         <RadioButton
-            android:id="@+id/main_menu_item2"
+            android:id="@+id/home_menu_item2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -39,7 +40,7 @@
             android:button="@null"
             />
         <RadioButton
-            android:id="@+id/main_menu_item3"
+            android:id="@+id/home_menu_item3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <RadioButton
-            android:id="@+id/main_menu_item4"
+            android:id="@+id/home_menu_item4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
