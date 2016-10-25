@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.text.ysq.lanrenzhoumo.Activity.SelfDataActivityTwo">
+    <LinearLayout
+        android:id="@+id/self_two_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEFEFE">
+        <ImageButton
+            android:id="@+id/self_two_btn_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:src="@drawable/left"
+            android:onClick="click"
+            android:background="#00FFFFFF"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择您的兴趣标签"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"/>
+        <ImageButton
+            android:id="@+id/self_two_btn_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:src="@drawable/right"
+            android:onClick="click"
+            android:background="#00FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/self_two_linearlayout"
+        >
+        <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="周边游"
+        android:drawableTop="@drawable/self_data_zhoubianyou"
+        android:drawableLeft="@drawable/radiogroup_state"
+        android:button="@null"
+        android:gravity="center"
+        />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -31,7 +31,6 @@ public class WelcomeActivity extends AppCompatActivity {
     private boolean isStop = false;
     private TextView mSubtxt;
     private TextView mTitletxt;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +72,10 @@ public class WelcomeActivity extends AppCompatActivity {
         int btnID = view.getId();
         switch (btnID){
             case R.id.welcome_btn_one:
-                Toast.makeText(context, "这是微博登录", Toast.LENGTH_LONG).show();
+                Toast.makeText(WelcomeActivity.this, "这是微博登录", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.welcome_btn_two:
-                Toast.makeText(context, "这是微信登录", Toast.LENGTH_LONG).show();
+                Toast.makeText(WelcomeActivity.this, "这是微信登录", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.welcome_btn_three:
                 Intent intent = new Intent();

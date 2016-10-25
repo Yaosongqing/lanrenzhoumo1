@@ -47,10 +47,93 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
         <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_avatar"
+            android:layout_marginTop="30dp"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/default_avatar"
-            android:layout_marginTop="50dp"/>
-
+            android:layout_marginTop="15dp"
+            android:text="匿名用户"
+            android:textSize="20sp"
+            android:textColor="#333942"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="性别"
+            android:textSize="15sp"
+            android:textColor="#999999"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textSize="20sp"
+                android:textColor="#333942"
+                android:drawableLeft="@drawable/radiogroup_sex_man"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:textSize="20sp"
+                android:textColor="#333942"
+                android:drawableLeft="@drawable/radiogroup_sex_woman"
+                android:button="@null"
+                android:drawablePadding="5dp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="当前状态"
+            android:textSize="15sp"
+            android:textColor="#999999"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="为人父母"
+                android:textSize="20sp"
+                android:textColor="#333942"
+                android:drawableLeft="@drawable/radiogroup_state"
+                android:button="@null"
+                android:drawablePadding="5dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="恋爱中/已婚"
+                android:textSize="20sp"
+                android:textColor="#333942"
+                android:drawableLeft="@drawable/radiogroup_state"
+                android:button="@null"
+                android:drawablePadding="5dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="单身生活"
+                android:textSize="20sp"
+                android:textColor="#333942"
+                android:drawableLeft="@drawable/radiogroup_state"
+                android:button="@null"
+                android:drawablePadding="5dp"/>
+        </RadioGroup>
     </LinearLayout>
 </RelativeLayout>

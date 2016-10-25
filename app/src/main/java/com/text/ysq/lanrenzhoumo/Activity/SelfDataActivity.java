@@ -1,5 +1,6 @@
 package com.text.ysq.lanrenzhoumo.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,9 @@ public class SelfDataActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.self_btn_two:
+                Intent intent = new Intent();
+                intent.setClass(this,SelfDataActivityTwo.class);
+                startActivity(intent);
                 break;
         }
     }
