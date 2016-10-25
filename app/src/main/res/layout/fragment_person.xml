@@ -8,6 +8,11 @@
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/fragment_person_relativelayout_one"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
             <LinearLayout
@@ -72,25 +77,39 @@
                 android:id="@+id/fragment_person_view"
                 android:layout_width="2dp"
                 android:layout_height="15dp"
-                android:layout_alignParentBottom="true"
                 android:layout_marginLeft="5dp"
                 android:background="#D2D2D2"
+                android:layout_alignParentBottom="true"
                 />
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我收藏的活动"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/fragment_person_view"
                 android:layout_alignParentBottom="true"
-
+                android:paddingBottom="10dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#D2D2D2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/fragment_person_relativelayout_one">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您还没有登陆哦~"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/ic_cat_shock_gray"
+                    />
+            </RelativeLayout>
         </RelativeLayout>
 
     </ScrollView>
