@@ -4,9 +4,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.text.ysq.lanrenzhoumo.Adapter.MenuAdapter;
 import com.text.ysq.lanrenzhoumo.Fragment.AssistantFragment;
@@ -25,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private RadioGroup mRadioGroup;
     private RadioButton mCurrentBtn;
+    private long exitTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,31 @@ public class HomeActivity extends AppCompatActivity {
         menuAdapter = new MenuAdapter(getSupportFragmentManager(), fragments);
         mViewPager.setAdapter(menuAdapter);
         initListener();
+    }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+//            if((System.currentTimeMillis()-exitTime) > 2000){
+//                Toast.makeText(HomeActivity.this, "再点一次，离开懒人周末", Toast.LENGTH_SHORT).show();
+//                exitTime = System.currentTimeMillis();
+//            } else {
+//                finish();
+//                System.exit(0);
+//            }
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis()-exitTime > 2000){
+            Toast.makeText(HomeActivity.this, "再点一次，离开懒人周末", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+        }
     }
 
     /**

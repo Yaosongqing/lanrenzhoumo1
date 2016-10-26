@@ -97,7 +97,7 @@
         android:layout_alignParentBottom="true"
         android:text="暂不登录，随便看看"
         android:textColor="#FFFFFF"
-        android:background="#33000000"
+        android:background="#55000000"
         android:onClick="click"
         />
 

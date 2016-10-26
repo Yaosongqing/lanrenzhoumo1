@@ -7,6 +7,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -21,6 +22,7 @@ import java.util.List;
 
 public class WelcomeActivity extends AppCompatActivity {
 
+    public static WelcomeActivity instance = null;
     private ViewPager mViewPager;
     private List<Integer> images = new ArrayList<>();
     private List<String> titleviews = new ArrayList<>();
@@ -31,6 +33,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private boolean isStop = false;
     private TextView mSubtxt;
     private TextView mTitletxt;
+    private long exitTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,33 @@ public class WelcomeActivity extends AppCompatActivity {
         myPagerAdapter = new MyPagerAdapter();
         mViewPager.setAdapter(myPagerAdapter);
         startBannerScrollThread();
+        instance = this;
+    }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+//            if((System.currentTimeMillis() - exitTime) > 2000){
+//                Toast.makeText(getApplicationContext(), "再按一次，离开懒人周末", Toast.LENGTH_SHORT).show();
+//                exitTime = System.currentTimeMillis();
+//            } else {
+//                finish();
+//                System.exit(0);
+//            }
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - exitTime > 2000){
+            Toast.makeText(getApplicationContext(), "再按一次，离开懒人周末", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+        }
     }
 
     /**
