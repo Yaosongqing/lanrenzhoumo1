@@ -18,7 +18,7 @@
         android:padding="10dp">
 
     <TextView
-        android:id="@+id/home_item_txt_one"
+        android:id="@+id/home_item_txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="成人钢琴【18课时】深度体验，御剑最美好的自己【188元抢购】！"
@@ -27,10 +27,10 @@
             android:id="@+id/home_item_linearlayout_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/home_item_txt_one"
+            android:layout_below="@id/home_item_txt_title"
             android:padding="5dp">
             <TextView
-                android:id="@+id/home_item_txt_two"
+                android:id="@+id/home_item_txt_huodong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="活动"/>
@@ -41,7 +41,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
             <TextView
-                android:id="@+id/home_item_txt_three"
+                android:id="@+id/home_item_txt_juli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="距离"/>
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
             <TextView
-                android:id="@+id/home_item_txt_four"
+                android:id="@+id/home_item_txt_fenlei"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="分类"/>
@@ -64,23 +64,23 @@
             android:layout_below="@id/home_item_linearlayout_one"
             android:padding="5dp">
             <TextView
-                android:id="@+id/home_item_time_txt"
+                android:id="@+id/home_item_txt_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="时间"
                 android:background="@drawable/textbiankuang"
                 />
             <TextView
-                android:id="@+id/home_item_shoucang_txt"
+                android:id="@+id/home_item_txt_shoucang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/home_item_time_txt"
+                android:layout_toRightOf="@id/home_item_txt_time"
                 android:text="收藏数"
                 android:drawableLeft="@drawable/ic_nav_black_heart_off_small"
                 android:background="@drawable/textbiankuang"
                 android:layout_marginLeft="10dp"/>
             <TextView
-                android:id="@+id/home_item_price_txt"
+                android:id="@+id/home_item_txt_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="价格"
