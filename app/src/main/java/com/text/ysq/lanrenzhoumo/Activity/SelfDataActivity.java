@@ -25,14 +25,15 @@ public class SelfDataActivity extends AppCompatActivity {
     public void click(View view){
         int btnID = view.getId();
         switch (btnID){
-            case R.id.self_btn_one:
+            case R.id.self_btn_back:
                 finish();
                 break;
-            case R.id.self_btn_two:
+            case R.id.self_btn_go:
                 Intent intent = new Intent();
                 intent.setClass(this,SelfDataActivityTwo.class);
                 startActivity(intent);
                 break;
+
         }
     }
 

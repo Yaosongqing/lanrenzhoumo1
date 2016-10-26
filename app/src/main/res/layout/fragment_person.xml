@@ -78,7 +78,7 @@
                 android:layout_width="2dp"
                 android:layout_height="15dp"
                 android:layout_marginLeft="5dp"
-                android:background="#D2D2D2"
+                android:background="#3C4042"
                 android:layout_alignParentBottom="true"
                 />
             <TextView

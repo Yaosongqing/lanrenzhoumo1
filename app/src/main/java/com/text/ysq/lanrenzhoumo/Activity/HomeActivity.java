@@ -38,6 +38,9 @@ public class HomeActivity extends AppCompatActivity {
         initListener();
     }
 
+    /**
+     * 以下是RG与VP实现
+     */
     private void initdata() {
         fragments.add(HomeFragment.newInstance());
         fragments.add(SearchFragment.newInstance());

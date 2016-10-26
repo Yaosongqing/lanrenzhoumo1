@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#FEFEFE">
         <ImageButton
-            android:id="@+id/self_btn_one"
+            android:id="@+id/self_btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -26,7 +26,7 @@
             android:layout_gravity="center_vertical"
             android:textSize="18sp"/>
         <ImageButton
-            android:id="@+id/self_btn_two"
+            android:id="@+id/self_btn_go"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -72,6 +72,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
             <RadioButton
+                android:id="@+id/self_btn_man"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="男"
@@ -80,11 +81,13 @@
                 android:drawableLeft="@drawable/radiogroup_sex_man"
                 android:button="@null"
                 android:drawablePadding="5dp"
+                android:onClick="click"
                 />
             <View
                 android:layout_width="10dp"
                 android:layout_height="match_parent"/>
             <RadioButton
+                android:id="@+id/self_btn_woman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="女"
@@ -92,7 +95,8 @@
                 android:textColor="#333942"
                 android:drawableLeft="@drawable/radiogroup_sex_woman"
                 android:button="@null"
-                android:drawablePadding="5dp"/>
+                android:drawablePadding="5dp"
+                android:onClick="click"/>
         </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
@@ -106,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
             <RadioButton
+                android:id="@+id/self_btn_parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="为人父母"
@@ -113,8 +118,10 @@
                 android:textColor="#333942"
                 android:drawableLeft="@drawable/radiogroup_state"
                 android:button="@null"
-                android:drawablePadding="5dp"/>
+                android:drawablePadding="5dp"
+                android:onClick="click"/>
             <RadioButton
+                android:id="@+id/self_btn_loving"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -123,8 +130,10 @@
                 android:textColor="#333942"
                 android:drawableLeft="@drawable/radiogroup_state"
                 android:button="@null"
-                android:drawablePadding="5dp"/>
+                android:drawablePadding="5dp"
+                android:onClick="click"/>
             <RadioButton
+                android:id="@+id/self_btn_single"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -133,7 +142,8 @@
                 android:textColor="#333942"
                 android:drawableLeft="@drawable/radiogroup_state"
                 android:button="@null"
-                android:drawablePadding="5dp"/>
+                android:drawablePadding="5dp"
+                android:onClick="click"/>
         </RadioGroup>
     </LinearLayout>
 </RelativeLayout>

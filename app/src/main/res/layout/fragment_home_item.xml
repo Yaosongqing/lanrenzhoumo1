@@ -1,16 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/home_item_imageview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/person_bg_unlogin"
+        android:scaleType="fitXY"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/home_item_imageview"
-        android:text="成人钢琴"/>
+        android:padding="10dp">
+
+    <TextView
+        android:id="@+id/home_item_txt_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="成人钢琴【18课时】深度体验，御剑最美好的自己【188元抢购】！"
+        android:textSize="18sp"/>
+        <LinearLayout
+            android:id="@+id/home_item_linearlayout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_item_txt_one"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/home_item_txt_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/home_item_txt_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/home_item_txt_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/home_item_linearlayout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_item_linearlayout_one"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/home_item_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:background="@drawable/textbiankuang"
+                />
+            <TextView
+                android:id="@+id/home_item_shoucang_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/home_item_time_txt"
+                android:text="收藏数"
+                android:drawableLeft="@drawable/ic_nav_black_heart_off_small"
+                android:background="@drawable/textbiankuang"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/home_item_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/textbiankuang"/>
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
