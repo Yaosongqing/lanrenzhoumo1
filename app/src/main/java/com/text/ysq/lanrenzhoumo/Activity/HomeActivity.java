@@ -41,6 +41,10 @@ public class HomeActivity extends AppCompatActivity {
         initListener();
     }
 
+    public void click(View view){
+        Toast.makeText(HomeActivity.this, "懒喵助手", Toast.LENGTH_SHORT).show();
+    }
+
 //    @Override
 //    public boolean onKeyDown(int keyCode, KeyEvent event) {
 //        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){

@@ -11,9 +11,13 @@ import java.net.URL;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.LruCache;
 import android.widget.ImageView;
 
 import com.text.ysq.lanrenzhoumo.R;
+import com.text.ysq.lanrenzhoumo.Tools.LogUtils;
 
 /**
  * 图片请求框架
@@ -24,10 +28,13 @@ import com.text.ysq.lanrenzhoumo.R;
  *
  */
 public class ImageAsyncLoader {
+
+	public static final int MAX_HEIGHT = 400;
 	
 	public static ImageAsyncTask load(String path,ImageView imageView) {
 		imageView.setTag(path);
 		imageView.setImageResource(R.drawable.abc_ic_cab_done_holo_light);
+
 		return new ImageAsyncTask(imageView, path);
 	}
 	
@@ -35,7 +42,6 @@ public class ImageAsyncLoader {
 
 		private ImageView mImageView;
 		private String path;
-		
 		public ImageAsyncTask(ImageView mImageView, String path) {
 			super();
 			this.mImageView = mImageView;
@@ -57,13 +63,23 @@ public class ImageAsyncLoader {
 					is = httpURLConnection.getInputStream();
 					int len = 0;
 					byte[] buffer = new byte[1024];
-					ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+					ByteArrayOutputStream arrayStream = new ByteArrayOutputStream();
 					while((len = is.read(buffer)) != -1) {
-						byteStream.write(buffer, 0, len);
+						arrayStream.write(buffer, 0, len);
 					}
-					byteStream.flush();
-					byte[] streamByte = byteStream.toByteArray();
-					Bitmap bitmap = BitmapFactory.decodeByteArray(streamByte, 0, streamByte.length);
+					arrayStream.flush();
+					byte[] streamByte = arrayStream.toByteArray();
+					//二次采样，压缩图片
+					BitmapFactory.Options options = new BitmapFactory.Options();
+					options.inJustDecodeBounds = true;
+					BitmapFactory.decodeByteArray(streamByte,0,streamByte.length,options);
+					int outHeight = options.outHeight;
+					Log.i(LogUtils.TAG, "doInBackground: outHeight="+options.outHeight);
+					int heightRatio = outHeight/MAX_HEIGHT;
+					options.inJustDecodeBounds = false;
+					options.inSampleSize = heightRatio;
+					Bitmap bitmap = BitmapFactory.decodeByteArray(streamByte, 0, streamByte.length,options);
+
 					return bitmap;
 				}
 			} catch (MalformedURLException e) {
