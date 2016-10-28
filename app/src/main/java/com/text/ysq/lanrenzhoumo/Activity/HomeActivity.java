@@ -42,7 +42,20 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void click(View view){
-        Toast.makeText(HomeActivity.this, "懒喵助手", Toast.LENGTH_SHORT).show();
+        int id = view.getId();
+        switch (id){
+            case R.id.assistant_txt3:
+                Toast.makeText(HomeActivity.this, "懒喵助手", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.fragment_person_btn_one:
+                Toast.makeText(HomeActivity.this, "跳转到登陆页面", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.fragment_person_btn_two:
+                Toast.makeText(HomeActivity.this, "跳转到登录页面", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.fragment_person_btn_three:
+                Toast.makeText(HomeActivity.this, "跳转到设置页面", Toast.LENGTH_SHORT).show();
+        }
     }
 
 //    @Override

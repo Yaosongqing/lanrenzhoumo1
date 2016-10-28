@@ -12,12 +12,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.DisplayMetrics;
-import android.util.Log;
-import android.util.LruCache;
 import android.widget.ImageView;
 
 import com.text.ysq.lanrenzhoumo.R;
-import com.text.ysq.lanrenzhoumo.Tools.LogUtils;
 
 /**
  * 图片请求框架
@@ -29,8 +26,8 @@ import com.text.ysq.lanrenzhoumo.Tools.LogUtils;
  */
 public class ImageAsyncLoader {
 
-	public static final int MAX_HEIGHT = 400;
-	
+	public static final int MAX_HEIGHT = 10;
+
 	public static ImageAsyncTask load(String path,ImageView imageView) {
 		imageView.setTag(path);
 		imageView.setImageResource(R.drawable.abc_ic_cab_done_holo_light);
@@ -42,6 +39,7 @@ public class ImageAsyncLoader {
 
 		private ImageView mImageView;
 		private String path;
+
 		public ImageAsyncTask(ImageView mImageView, String path) {
 			super();
 			this.mImageView = mImageView;
@@ -72,14 +70,12 @@ public class ImageAsyncLoader {
 					//二次采样，压缩图片
 					BitmapFactory.Options options = new BitmapFactory.Options();
 					options.inJustDecodeBounds = true;
-					BitmapFactory.decodeByteArray(streamByte,0,streamByte.length,options);
+					BitmapFactory.decodeByteArray(streamByte,0,streamByte.length);
 					int outHeight = options.outHeight;
-					Log.i(LogUtils.TAG, "doInBackground: outHeight="+options.outHeight);
 					int heightRatio = outHeight/MAX_HEIGHT;
 					options.inJustDecodeBounds = false;
 					options.inSampleSize = heightRatio;
 					Bitmap bitmap = BitmapFactory.decodeByteArray(streamByte, 0, streamByte.length,options);
-
 					return bitmap;
 				}
 			} catch (MalformedURLException e) {
@@ -104,7 +100,7 @@ public class ImageAsyncLoader {
 		}
 		
 	}
-	
+
 	private static void close(Closeable closeable) {
 		if (closeable != null) {
 			try {

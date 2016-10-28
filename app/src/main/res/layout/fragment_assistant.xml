@@ -34,6 +34,7 @@
                 android:layout_marginTop="20dp"
                 />
             <RelativeLayout
+                android:id="@+id/assistant_rl_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/assistant_img"
@@ -73,7 +74,31 @@
                     android:layout_alignTop="@id/assistant_txt2"
                     android:textSize="10sp"
                     android:text="为你服务~"/>
+
+
             </RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assistant_rl_one"
+                android:src="@drawable/fenge_line"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/editline"
+                android:layout_above="@+id/assistant_Edit_txt"/>
+            <EditText
+                android:id="@id/assistant_Edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="15dp"
+                android:hint="告诉我你周末的需求吧···"
+                android:textCursorDrawable="@null"
+                android:textColorHint="#757575"
+                android:background="#FFFFFF"/>
         </RelativeLayout>
 
     </RelativeLayout>

@@ -7,17 +7,39 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/search_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <Button
             android:id="@+id/search_choose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="武汉"
+            android:drawableRight="@drawable/ic_down"
+            android:padding="10dp"
             />
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/search_choose"/>
-
-
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/search_rl"
+            android:hint="搜索活动或地点"
+            android:drawableLeft="@drawable/ic_search"
+            android:background="#00FFFFFF"
+            />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_rl"
+            android:background="#F6F6F6">
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2">
+            </GridView>
+        </RelativeLayout>
     </RelativeLayout>
 
 </FrameLayout>
