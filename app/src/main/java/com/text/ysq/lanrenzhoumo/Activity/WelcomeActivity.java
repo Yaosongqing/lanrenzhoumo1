@@ -102,15 +102,19 @@ public class WelcomeActivity extends AppCompatActivity {
         int btnID = view.getId();
         switch (btnID){
             case R.id.welcome_btn_one:
-                Toast.makeText(WelcomeActivity.this, "这是微博登录", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(this,LogingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.welcome_btn_two:
-                Toast.makeText(WelcomeActivity.this, "这是微信登录", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent();
+                intent2.setClass(this,LogingActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.welcome_btn_three:
-                Intent intent = new Intent();
-                intent.setClass(this,SelfDataActivity.class);
-                startActivity(intent);
+                Intent intent3 = new Intent();
+                intent3.setClass(this,SelfDataActivity.class);
+                startActivity(intent3);
                 break;
         }
 

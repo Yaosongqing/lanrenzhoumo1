@@ -1,5 +1,6 @@
 package com.text.ysq.lanrenzhoumo.Activity;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -48,13 +49,19 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(HomeActivity.this, "懒喵助手", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fragment_person_btn_one:
-                Toast.makeText(HomeActivity.this, "跳转到登陆页面", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(this,LogingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.fragment_person_btn_two:
-                Toast.makeText(HomeActivity.this, "跳转到登录页面", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "兴趣标签", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fragment_person_btn_three:
-                Toast.makeText(HomeActivity.this, "跳转到设置页面", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent();
+                intent2.setClass(HomeActivity.this,SettingActivity.class);
+                startActivity(intent2);
+                break;
+
         }
     }
 
@@ -139,7 +146,7 @@ public class HomeActivity extends AppCompatActivity {
                     case 3:
                         mRadioGroup.check(R.id.home_menu_item4);
                         break;
-                }
+                    }
                 }
 
                 @Override
